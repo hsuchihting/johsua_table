@@ -3,224 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="YOUR_INTEGRITY_CODE" crossorigin="anonymous">
-    <title>Joshua_table</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="title_block">
-            <i class="fa-solid fa-trophy fa-2x"></i>
-            <h1 class="title">GOOD BOY AWARD CHALLENGE MISSION</h1>
-            <i class="fa-solid fa-trophy fa-2x"></i>
+
+    <div id="app">
+        <div class="container">
+            <h1 class="title">Joshua Reward Card</h1>
+            <table class="full-width-table">
+                <tr v-for="row in 5" :key="'row' + row">
+                    <td v-for="(number, index) in numbers.slice((row - 1) * 6, row * 6)" :key="'col' + index" class="center-content">
+                        <p class="circle">
+                            {{ number }}
+                        </p>
+                    </td>
+                </tr>
+            </table>
         </div>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>挑戰項目<br><span>CHALLENGE MISSION</span></th>
-                    <th>禮拜日<br><span>SUNDAY</span></th>
-                    <th>禮拜一<br><span>MONDAY</span></th>
-                    <th>禮拜二<br><span>TUESDAY</span></th>
-                    <th>禮拜三<br><span>WEDNESDAY</span></th>
-                    <th>禮拜四<br><span>THURSDAY</span></th>
-                    <th>禮拜五<br><span>FRIDAY</span></th>
-                    <th>禮拜六<br><span>SATURDAY</span></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-cow fa-2x"></i>
-                        <br>
-                        <span>MILK</span>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-shirt fa-2x"></i>
-                        <br>
-                        <span>SHIRT</span>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <i class="shoes fa-solid fa-shoe-prints fa-2x"></i>
-                        <br>
-                        <span>SHOES</span>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-bag-shopping fa-2x"></i>
-                        <br>
-                        <span>SCHOOL BAG</span>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-hands-bubbles fa-2x"></i>
-                        <br>
-                        <span>WASH HANDS</span>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-utensils fa-2x"></i>
-                        <br>
-                        <span>EATING</span>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <i
-                            class="fa-sharp fa-solid fa-face-meh-blank fa-2x"></i>
-                        <br>
-                        <span>QUIET</span>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-bath fa-2x"></i>
-                        <br>
-                        <span>BATH</span>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-car fa-2x"></i>
-                        <br>
-                        <span>TOYS</span>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-toilet fa-2x"></i>
-                        <br>
-                        <span>TOILET</span>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-tooth fa-2x"></i>
-                        <br>
-                        <span>BRUSH TEETH</span>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-bed fa-2x"></i>
-                        <br>
-                        <span>GO TO BED</span>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-medal fa-2x"></i>
-                        <br>
-                        <span>TOTAL POINTS</span>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-            <tfoot></tfoot>
-        </table>
     </div>
 
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    numbers: Array.from({ length: 30 }, (_, i) => i + 1)
+                }
+            }
+        }
+        )
+    </script>
 </body>
 
 </html>
